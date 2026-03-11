@@ -1,0 +1,256 @@
+header{
+    background: linear-gradient(-45deg, #e5a722, #f9e000a1) !important;
+    width: 100% !important;
+    padding: 25px 0px !important;
+    margin: 0px !important;
+}
+
+header .image2{
+    display: inline-flex;
+    padding-left: 40px;
+    align-items: center !important;
+    transition: 0.3s all ease-in-out;
+}
+
+header .image2:hover{
+    transform: scale(1.20);
+}
+
+header .image2 img{
+    width: 120px;
+    height: auto;
+    padding-left: 25px !important;
+    background: none !important;
+    animation: rotate 8s infinite alternate;
+}
+
+@keyframes rotate{
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    25%{
+        transform: rotate(90deg);
+    }
+
+    50%{
+        transform: rotate(180deg);
+    }
+
+    75%{
+        transform: rotate(270deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+nav{
+    padding: 0px !important;
+    margin: 0px !important;
+    background: #000;
+    color: #fff;
+    opacity: 50%;
+    font-size: 16px !important;
+}
+
+nav marquee{
+    padding: 12px 0px !important;
+
+}
+
+nav marquee .a{
+    display: inline-flexbox;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+nav marquee .a li{
+    list-style: none !important;
+    text-align: center;
+}
+
+nav marquee ul{
+    display: inline-flex;
+    list-style: none;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+nav marquee ul li{
+    margin: 0px !important;
+    list-style: none !important;
+    padding-left: 20px !important;
+
+}
+
+body video{
+
+    position: absolute;
+    top: 60%;
+    right: 4%;
+    height: auto;
+    border: 4px solid #000;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+body p{
+    font-size: 20px;
+}
+
+body h2{
+    color: #000;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.guide{
+    margin: 40px;
+    text-align: justify;
+    width: 52%;
+    line-height: 45px;
+}
+
+body h4{
+    color: #82dc14ff;
+    font-size: 28px;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.step{
+    font-size: 20px !important;
+    padding: 25px 0px !important;
+}
+
+.step ol li{
+    font-size: 20px;
+    list-style: inside square !important;
+}
+
+.step ol li a{
+    color: #000;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: 0.3s all ease-in-out;
+}
+
+.step ol li a:hover{
+    padding-left: 20px !important;
+}
+
+.image img{
+    transition: 0.3s all ease-in-out;
+}
+
+.image img:hover{
+    transform: scale(1.10);
+}
+
+body .all img{
+
+    position: absolute;
+    left: 55%;
+    top: 350%;
+    transition: 0.3s all ease-in-out;
+    animation: MovetoLeft 4s infinite ease alternate;
+}
+
+body .all img:hover{
+    transform: scale(1.05) !important;
+}
+
+@keyframes MovetoLeft{
+
+    from{
+        transform: translate(0px);
+    }
+
+    to{
+        transform: translate(60px);
+    }
+
+}
+
+
+form{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    width: 40%;
+}
+
+form h1{
+    font-size: 32px;
+    color: #e5a722;
+    text-align: center;
+    padding: 25px 0px;
+    margin: 0px !important;
+    padding-left: 100px;
+}
+
+form .cell{
+
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 12px !important;
+    box-sizing: border-box;
+    width: 100%;
+    align-items: center;
+    padding-left: 100px;
+}
+
+form input{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    
+}
+
+form textarea{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+}
+
+
+form .button{
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    padding-left: 100px;
+    margin-bottom: 40px;
+}
+
+form .button button{
+
+    border-radius: 20px;
+    margin-top: 10px !important;
+    background: #e5a722;
+    color: #000;
+    transition: 0.3s all ease-in-out;
+}
+
+form .button button:hover{
+    background: #000;
+    color: #fff;
+
+}
+
+button .btn{
+
+    font-size: 24px;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 14px 12px;
+
+}
+
+
+
+

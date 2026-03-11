@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="structure.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <title> PV Solar Design </title>
+
+    <div class="header">
+
+        <div class="image-1">
+
+            <h1><i class="fa-solid fa-bolt"></i> SunValue Energy </h1>
+
+            <img src="Images Used\pngtree-sun-solar-system-on-transparent-background-png-image_15825106-removebg-preview.png" alt="">
+
+        </div>
+
+        <div class="list">
+
+        <ul>
+        <li><a href="#"> Home </a></li>
+        <li><a href="#"> Services </a>
+        <li><a href="#"> R&D Center </a></li>
+        <li><a href="#"> Our Projects </a></li>
+        <li><a href="#"> Contact Us </a></li>
+        </ul>
+
+        </div>
+
+    </div>
+
+
+</head>
+
+<br>
+<br>
+
+<body>
+
+        <h2> Solar Panel <d> Calculator... </d> </h2>
+
+    <div class="calculator">
+
+        <div class="cell">
+        <label> Consume Energy (KWh/day) </label>
+        <input type="number" id="load"><br><br>
+        </div>
+
+        <div class="cell">
+        <label> Solar (W) </label>
+        <input type="number" id="solar" value="550"><br><br>
+        </div>
+
+        <div class="cell">
+        <label> Sunrisehours  </label>
+        <input type="number" id="sunrisehours" value="6"><br><br>
+        </div>
+
+        <div class="cell">
+        <label> Safety Factor </label>
+        <input type="number" id="Factor" value="1.75"><br><br>
+        </div>
+
+        <div class="cell">
+        <label> System losses (%) </label>
+        <input type="number" id="losses" value="20"><br><br>
+        </div>
+
+        <div class="cell">
+        <label> Area Required For Solar Panel (m^2) </label>
+        <input type="number" id="area" value="24"><br><br>
+        </div>
+
+
+        <label> Inverter Use </label>
+        <Select id="select">
+                <option value=""> -- Select option -- </option>
+                <option value="Yes"> Yes </option>
+                <option value="No"> No </option>
+        </Select><br><br>
+
+        <div class="seperator">
+
+        <div class="cell">
+            <label> Ambient Temperature (C)</label>
+            <input type="number" id="Temperature"><br><br>
+        </div>
+        
+        <div class="cell">
+            <label> How Much Hours Battery Will Run For Backup? (hrs.) </label>
+            <input type="number" id="Battery">
+        </div>
+
+        </div>
+
+        <br>
+        <br>
+        
+
+        <button type="button" onclick="calculateSolar()"> <h3><i class="fa-solid fa-calculator"></i> Calculate </h3>  </button>
+
+    </div>
+
+        <div id="result"></div>
+
+        <div id="info"></div>
+
+        <h2 style="text-align: center; color: #000; margin-top: 40px;"><i class="fa-solid fa-chart-simple"></i> PV Solar Statics </h2>
+
+        <div class="dashboard">
+            
+            <div class="chart">
+            <div class="chart-area">
+                <canvas id="solarChart"></canvas>
+            </div>
+            <button id="btn" type="button" onclick="downloadChart()"> Download Chart </button>
+            </div>
+
+            <div class="chart">
+            <div class="chart-area">
+                <canvas id="monthlyChart"></canvas>
+            </div>
+            <button id="btn" type="button" onclick="downloadMonthly()"> Download Chart </button>
+            </div>
+
+        </div>
+
+        
+
+<script src="structure.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+</body>
+</html>

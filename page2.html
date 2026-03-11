@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="page2.css">
+
+   
+
+    <title> Annual Calculation </title>
+</head>
+<body>
+
+    <div class="guide">
+
+        <div class="step">
+
+        <h2> Complete Overview Of Solar Panel Installation </h2>
+
+        <p> PV Solar System installation is a source or medium, that helps mankind in many ways. Either in running of home appliances or any field food, which we take as a result of solar energy. Globally, Solar Energy is the most widely energy source that covers many fields and give maximum efficiency with no much time taken. Although, its efficiency depends on many factors like; <br><br><br><br>
+
+            <em><b><i class="fa-solid fa-solar-panel fa-beat"></i> Solar Panel efficiency</b> <i class="fa-solid fa-angles-up fa-bounce" style="color: green"></i> ambient Temperature, SunRise Hours, derating Power & Sun Rise Hours </em>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            These factors which may effect the Total Solar efficiency (%). In <i class="fa-solid fa-flag fa-flip"></i><b> Pakistan, </b> there is optimum temperature in many regions that is suitable for the owner, budget friendly and covers confined space to install. If the energy production (kWh) is greater than your daily house cumulative load, then excess energy generation is not lost, it will transfer/sell to the WAPDA via grid-lines. Then, your monthly bill indicates that how much you transfer/sell units to WAPDA. If the system is <b> On-Grid PV System. </b> 
+        
+        </p>
+
+        </div>
+
+        <div class="step">
+
+            <h1><i class="fa-solid fa-house-chimney-user"></i> On-Grid Solar System</h1>
+
+            <div class="cell">
+                <label> Entire Year Units Consumed  </label>
+                <input type="number" id="year" placeholder="Add 12 months units" style="text-align: center; font-weight: medium">
+            </div>
+
+            <div class="cell">
+                <label> How much Solar Watt? (W) </label>
+                <input type="number" id="watt" style="text-align: center; font-weight: medium">
+            </div>
+
+            <div class="cell">
+                <label> Sun Rise Hours. </label>
+                <input type="number" id="sun" style="text-align: center; font-weight: medium">
+            </div>
+
+            <div class="cell">
+                <label> PV Solar Solar Efficiency </label>
+                <input type="number" id="efficiency" value="0.80" style="text-align: center; font-weight: medium">
+            </div>
+
+            <div class="cell">
+                <label> Carbon Dioxide (CO2) Reduction (kg/kWh)</label>
+                <input type="number" id="Reduction" value="0.5"> 
+                <p style="color: blue"> Every<b>1kWh Electricity Generation</b>is achieved by 0.5kg Carbon dioxide emitted from the fossil fuels in power-plant.</p>
+            </div>
+
+            <div class="cell">
+
+            <select id="solarType">
+
+                <option value=""> -- Select Solar System Type -- </option>
+                <option value="On-Grid Solar System"> On-Grid Solar System </option>
+                <option value="Off-Grid Solar System"> Off-Grid Solar System </option>
+                <option value="Hybrid Solar System"> Hybrid Solar System </option>
+
+            </select><br><br> 
+
+             </div>
+
+        <button type="button" onclick="calculateFinal()"><h3> <i class="fa-solid fa-calculator"></i> On-Grid Results </h3></button>
+
+        <br>
+        <br>
+
+        <button type="button" onclick="generateOnGridReport()"><h3><i class="fa-solid fa-calculator fa-bounce"></i> Generate Report </h3> </button>
+        
+        </div>
+
+
+        <div class="step">
+
+            <h1><i class="fa-solid fa-battery-full"></i> + <i class="fa-solid fa-solar-panel"></i> Off-Grid Solar System </h1>
+
+            <div class="cell">
+                <label> Yearly Units Consumed </label>
+                <input type="number" id="offyear">
+            </div>
+
+            <div class="cell">
+                <label> Sun Rise Hours (hrs.) </label>
+                <input type="number" id="offhours">
+            </div>
+
+            <div class="cell">
+                <label> Solar Panel Watts </label>
+                <input type="number" id="offWatts">
+            </div>
+
+            <div class="cell">
+                <label> Battery BackUp Days </label>
+                <input type="number" id="offdays">
+            </div>
+
+
+
+    <button type="button" onclick="calculatetypes()"><h3> <i class="fa-solid fa-calculator"></i> Off-Grid Results </h3></button>
+
+
+        </div>
+
+        <div class="step">
+
+            <h1><i class="fa-solid fa-microchip"></i> Hybrid Solar System </h1>
+
+            <div class="cell">
+                <label> Yearly Units Consumed </label>
+                <input type="number" id="hybridyear">
+            </div>
+
+            <div class="cell">
+                <label> Sun Rise Hours (hrs.) </label>
+                <input type="number" id="hybridhours">
+            </div>
+
+            <div class="cell">
+                <label> Solar Panel Watts </label>
+                <input type="number" id="hybridWatts">
+            </div>
+
+
+            <div class="Battery">
+
+                <h2> Battery Management System (BMS) </h2>
+                <br>
+
+                <ul>
+
+                <li> <h4> Day-Time Working </h4> </li>
+                <p> In Day-Time, Solar Panel Supplies load to run home appliances smoothly. If excess units produce, it will store in the Battery for BackUp.  </p>
+
+                <li> <h4> Night-Time Working </h4> </li>
+                <p> In Night-Time, Battery Supplies load to run home appliances without any disturbance. If Battery power low, the grid-system will help for smooth operation.</p>
+
+                </ul>
+
+            <div class="cell">
+
+                <label> Critical Night Time Load (kWh) </label> 
+                <input type="number" id="hybridnight">
+                <br>
+                <b> (06:00 PM - 08:00 AM) </b>
+                <br>
+                <br>
+
+                <b> Critical Load = Highest Load of home appliances, that may occur for safety. </b>
+
+                <p style="width: 60%"> "Put the right Night-Time load, it will help a lot to select the suitable battery for your system and gives you BackUp hours smoothly. Insert all your home Appliances, that work on battery during night-time & consider their quantities also." </p>
+            </div>
+
+            </div>
+
+    <button type="button" onclick="calculatehybrid()"><h3><i class="fa-solid fa-calculator"></i> Hybrid Results </h3></button>
+
+        </div>
+
+
+    </div>
+
+    <div id="final"></div>
+
+    <div id="more"></div>
+
+    <div id="types"></div>
+
+    <div id="hybrid"></div>
+
+
+
+    <script src="Javascript/page2.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+
+    
+</body>
+</html>

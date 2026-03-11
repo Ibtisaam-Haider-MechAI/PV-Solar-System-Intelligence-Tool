@@ -1,0 +1,332 @@
+
+
+.header{
+    display: inline-flex;
+    background: linear-gradient(-45deg, #e5a722, #f9e000a1) !important;
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: space-between;
+}
+
+.header h1{
+    padding: 10px 0px !important;
+    font-size: 36px;
+    color: #000;
+}
+
+.header .image-1{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 20px !important;
+    margin: 0px !important;
+    
+}
+
+.header .image-1 img{
+    width: 120px;
+    height: auto;
+    animation: rotate 8s infinite alternate;
+}
+
+@keyframes rotate{
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    25%{
+        transform: rotate(90deg);
+    }
+
+    50%{
+        transform: rotate(180deg);
+    }
+
+    75%{
+        transform: rotate(270deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+
+.header .list{
+    justify-items: right !important;
+    padding: 22px 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.header .list ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding-right: 20px !important;
+}
+
+.header .list ul li{
+    text-decoration: none;
+    padding: 0px 4px;
+}
+
+.header .list ul li a{
+
+    font-size: 24px !important;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    text-decoration: none;
+    justify-content: space-between;
+    padding: 0px 24px !important;
+    margin: 0px !important;
+    transition: 0.3s all ease-in-out;
+}
+
+.header .list ul li a:hover{
+    color: #000 !important;
+    font-weight: bold;
+}
+
+body{
+    font-family: 'Arial Narrow Bold';
+    font-size: 18px;
+}
+
+body h1{
+    font-size: 48px;
+    color: #000;
+    text-align: center;
+}
+
+.slide{
+    animation: slideToLeft 4s ease-in-out infinite alternate;
+}
+
+@keyframes slideToLeft {
+
+    from{
+        transform: translateX(-40px);
+    }
+
+    to{
+        transform: translateX(40px);
+    }
+    
+}
+
+body h2{
+    font-size: 32px;
+    color: #e5a722;
+    text-align: center;
+    padding: 6px;
+}
+
+body h3{
+    font-weight: normal;
+    font-size: 28px;
+    color: #fff;
+    margin: 0;
+    padding: 4px 8px;
+}
+
+
+body d{
+    padding: 6px;
+    color: #fff;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #000, #F9E000);
+    background-size: 200% 200%;
+    animation: gradientMove 4s ease infinite alternate;
+}
+
+@keyframes gradientMove{
+
+    0%{
+        background-position: 0% 100%;
+    }
+
+    25%{
+        background-position: 25% 75%;
+    }
+
+    50%{
+        background-position: 50% 50%;
+    }
+
+    75%{
+        background-position: 75% 25%;
+    }
+
+    100%{
+        background-position: 100% 0%;
+    }
+
+}
+
+.calculator{
+    margin-top: 0px;
+    padding-top: 20px;
+    text-align: center;
+    background-image: url(Images\ Used/source.gif);
+    background-position: 95% 20%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.calculator .cell{
+    padding: 6px;
+}
+
+.calculator .seperator{
+
+    position: relative;
+    display: inline;
+    justify-self: center;
+}
+
+.calculator label{
+    font-weight: 550;
+    display: flex;
+    padding-left: 380px;
+}
+
+.calculator input{
+    color: #000;
+    font-weight: 550;
+    text-align: center;
+    width: 10%;
+    padding: 4px;
+}
+
+.overall{
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 10px;
+}
+
+.daily, .monthly,.annual, .battery{
+    border-left: 2px solid #000;
+    padding: 16px;
+    background: linear-gradient(-45deg, #82dc14ff, #ffffff92);
+    border-radius: 20px;
+    margin: 0px;
+    transition: 0.3s all ease;
+}
+
+.daily h2, .monthly h2, .annual h2, .battery h2{
+
+    border-bottom: 4px solid #000;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: left;
+    border-radius: 5px;
+}
+
+.daily:hover, .monthly:hover,.annual:hover, .battery:hover{
+
+    color: #000 !important;
+    background: #5d535376 !important;
+    cursor: cell;
+    transform: scale(1.02);
+}
+
+#select, .value:hover{
+    font-size: 14px;
+    transition: 0.3s all ease;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    background: #82dc14ff;
+    width: 10%;
+    font-weight: 550;
+}
+
+button{
+
+    margin-top: 20px;
+    padding: 8px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 400;
+    background: linear-gradient(90deg, #000, #F9E000);
+    background-size: 200% 200%;
+    border: none !important;
+    transition: 0.3s all ease;
+    animation: gradientMove 2s ease infinite alternate;
+}
+
+@keyframes gradientMove{
+
+    0%{
+        background-position: 0% 100%;
+    }
+
+    25%{
+        background-position: 25% 75%;
+    }
+
+    50%{
+        background-position: 50% 50%;
+    }
+
+    75%{
+        background-position: 75% 25%;
+    }
+
+    100%{
+        background-position: 100% 0%;
+    }
+
+}
+
+button:hover{
+    background: #000;
+    cursor: pointer;
+}
+
+.dashboard{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 0px;
+}
+
+.chart{
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgb(0, 0, 0, 0.80);
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 18px;
+}
+
+.chart-area{
+    width: 100%;
+    min-height: 380px !important;
+}
+
+#btn{
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: 550;
+    padding: 12px 20px;
+    border-radius: 20px !important;
+    transition: 0.3s all ease-in-out;
+}
+
+#btn:hover{
+    background: #000 !important;
+}
+
+
+
+
+
+
+
+
+
+
